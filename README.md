@@ -1,11 +1,11 @@
-# ☣ COVID-19-REACT ☣
+# 🛒 MerKas 📱
 
-Este repositorio contiene un proyecto sobre la afectacion del coronavirus en colombia y el mundo mostrando datos realez y la tendencia del COVID-19 en nuestro pais.
-
-![Captura de la App](./readme-static/.png)
+Este repositorio contiene un proyecto con un a PWA que permite realizar una lista de compras de forma facil y ordenada
 
 ![Captura de la App](./readme-static/.png)
-[Ver la aplicación](https://react-birdgram.jorgevelasquez006.now.sh/)
+
+![Captura de la App](./readme-static/.png)
+[Ver la aplicación](https://jorgevels.github.io/MerKar/)
 
 ## 👨‍💻 Cómo funciona?
 
