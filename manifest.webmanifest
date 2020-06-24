@@ -17,5 +17,5 @@
   ],
   "name": "Lista de Compras",
   "short_name": "MerKar",
-  "start_url": "/Merquemos/index.html"
+  "start_url": "."
 }
