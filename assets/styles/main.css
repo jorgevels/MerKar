@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.header {
+  align-items: center;
+  background-color: #f7fff7;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+
+.container {
+  background: linear-gradient(#f7fff7, #ffe66d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: calc(100vh - 200px);
+  max-width: 100%;
+}
+
+.car__img {
+  width: 250px;
+  margin-top: -50%;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  touch-action: auto;
+}
+
+.car__tap {
+  width: 150px;
+  margin-left: 10%;
+}
+
+.container-main_click {
+  justify-content: center;
+}
+
+.container-main_title h1 {
+  font-family: 'Lobster';
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background: #ffe66d;
+  justify-content: center;
+}
+
+.footer a {
+  margin-bottom: 3rem;
+}

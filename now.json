@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "name": "MerKar",
+  "builds": [
+    {
+      "use": "@now/static-build",
+      "src": "package.json"
+    }
+  ],
+  "routes": [
+    {
+      "src": "(.*).js",
+      "dest": "/$1.js"
+    },
+    {
+      "src": "(.*).css",
+      "dest": "/$1.css"
+    },
+    {
+      "src": "(.*).png",
+      "dest": "/$1.png"
+    },
+    {
+      "src": "(.*).ico",
+      "dest": "/$1.ico"
+    },
+    {
+      "src": "(.*).json",
+      "dest": "/$1.json"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}

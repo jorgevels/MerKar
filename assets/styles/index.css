@@ -1,0 +1,554 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(#f7fff7, #f7f385);
+  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
+  min-height: calc(100vh - 0px);
+  max-width: 100%;
+}
+
+#capa {
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#capa > div:first-child {
+  margin: 0;
+  position: absolute;
+  position: fixed;
+  /* height: 30%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  border: 1px solid #ebebeb;
+  padding: 5px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 3px;
+}
+
+.title {
+  /* background-color: #eee; */
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  /* color: red; */
+  /* font-size: 32px; */
+}
+.fa-trash-alt {
+  font-size: 35px;
+}
+
+.text {
+  text-align: center;
+  padding: 5px;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.buttons {
+  text-align: center;
+  /*  border-top: 1px solid #eee; */
+  border-top: 1px solid red;
+  padding: 5px 10px;
+  margin-top: 30px;
+  /*  font-size: 40px; */
+}
+
+/* .button {
+  font-family: Arial;
+  font-size: 15pt;
+  color: #fd3e81;
+  background-color: #f1d302;
+  border: none;
+  border-radius: 2px;
+} */
+.button-borrar {
+  font-family: Arial;
+  font-size: 13pt;
+  width: 14%;
+  height: 40px;
+  color: white;
+  background-color: #3085d6;
+  border: none;
+  border-radius: 2px;
+  margin: 10px;
+}
+.button-cancelar {
+  font-family: Arial;
+  font-size: 13pt;
+  width: 14%;
+  height: 40px;
+  color: white;
+  background-color: #d33;
+  border: none;
+  border-radius: 2px;
+}
+
+.header h3 {
+  display: flex;
+  background-color: #f1d302;
+  /*  height: 40px; */
+  height: 50px;
+  font-family: "Lobster";
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.header-container-promo {
+  max-width: 150px;
+  position: absolute;
+  text-align: center;
+  padding-left: 68%;
+  position: fixed;
+}
+.header-anuncio-promo p {
+  /*  background-color: #fd3e81; */
+  background-color: #f1d302;
+  border-radius: 3px;
+  text-align: center;
+  color: black;
+  width: 130px;
+  margin: 0;
+  font-weight: 600;
+  /*  margin-top: -40px; */
+  margin-top: -10px;
+  position: fixed;
+}
+
+.header-container-promo-list {
+  background-color: #fd3e81;
+  border-radius: 3px;
+  /*   margin-top: 2px; */
+  margin-top: 9px;
+
+  width: 130px;
+  height: 20px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  overflow: hidden;
+  position: fixed;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  animation: cambiar 17s infinite;
+}
+
+.container-promo p {
+  text-align: left;
+}
+
+@keyframes cambiar {
+  0% {
+    margin-top: 0;
+  }
+  5% {
+    margin-top: 0;
+  }
+  12% {
+    margin-top: -20px;
+  }
+  15% {
+    /*  margin-top: -40px; */
+  }
+  20% {
+    margin-top: -40px;
+  }
+
+  25% {
+    /*  margin-top: -50px; */
+  }
+  30% {
+    margin-top: -60px;
+  }
+
+  35% {
+    /*  margin-top: -60px; */
+  }
+  40% {
+    margin-top: -80px;
+  }
+
+  45% {
+    /*  margin-top: -70px; */
+  }
+  50% {
+    margin-top: -100px;
+  }
+
+  55% {
+    /*  margin-top: -80px; */
+  }
+  60% {
+    margin-top: -120px;
+  }
+  65% {
+    /*  margin-top: -90px; */
+  }
+  70% {
+    margin-top: -140px;
+  }
+
+  75% {
+    margin-top: -160px;
+  }
+  80% {
+    /*  margin-top: -100px; */
+  }
+  85% {
+    margin-top: -180px;
+  }
+  90% {
+    /*  margin-top: -110px; */
+  }
+  100% {
+    margin-top: -200px;
+  }
+}
+/* .container-compras {
+  justify-content: center;
+  align-items: center;
+} */
+
+.header-cantidad-car-lis {
+  display: flex;
+  position: fixed;
+  /* margin-left: 20%; */
+}
+
+.header-cantidad-car-lis input#totales.header-valor-car {
+  /*  margin-left: 6.9%; */
+  /* margin-left: 8%; */
+  margin-left: 110%;
+}
+
+.header-cantidad-car-lis input#count.header-valor-list {
+  /* margin-left: 6.7%; */
+  margin-left: 130%;
+}
+
+.header-valor-car {
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 20px;
+  width: 25px;
+  border: 0;
+  margin-top: -15px;
+  /*  margin-left: 8%; */
+}
+
+.header-valor-list {
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 20px;
+  width: 25px;
+  border: 0;
+  margin-top: -15px;
+}
+
+.header-images-compra {
+  display: flex;
+  position: fixed;
+  /*  margin-left: 5%; */
+  margin-top: 35px;
+}
+
+.header-images-compra img.header-cart-compras {
+  height: 30px;
+  /*  width: auto; */
+  /*  padding-left: 6.9%; */
+  /* padding-left: 40%; */
+  margin-top: -33px;
+  margin-left: 90%;
+  /* position: absolute; */
+  /* position: fixed; */
+}
+.header-images-compra img.header-list-compras {
+  height: 30px;
+  /* width: auto; */
+  /* padding-left: 6.5%; */
+  /* padding-left: 10.5%; */
+  margin-top: -33px;
+  /*  position: absolute; */
+  /*  position: fixed; */
+  /*  margin-left: 95%; */
+  margin-left: 100%;
+}
+
+.header-fecha {
+  border-radius: 25px;
+  font-family: "Muli", sans-serif;
+  color: #423a01;
+  font-size: 12px;
+  height: 25px;
+  min-width: 100%;
+  position: absolute;
+  /*   margin-top: -14px; */
+  margin-top: 35px;
+  text-align: center;
+  position: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+.container-input {
+  display: flex;
+}
+
+.table-repsonsive {
+  margin: 27px 2px 2px 2px;
+}
+
+.form-control.car {
+  text-align: left;
+}
+
+.table-bordered th,
+td {
+  vertical-align: middle !important;
+  text-align: center !important;
+  padding: 2px !important;
+  margin-right: 20px !important;
+}
+th {
+  text-align: center;
+  background-color: #f6e35e;
+  border: 1px solid #f7fff7 !important;
+  border-radius: 5px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 1px !important;
+  text-align: center !important;
+}
+
+.form-controls {
+  vertical-align: middle !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.form-control {
+  font-weight: 500;
+}
+
+input[type="checkbox"] {
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+input[type="checkbox"]:before {
+  content: "\2714";
+  border: 2px solid MediumSeaGreen;
+  background-color: white;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  color: transparent;
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:active:before {
+  transform: scale(0);
+}
+
+input[type="checkbox"]:checked:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+.btn-info {
+  margin: -15px 0 45px 0;
+}
+
+/* .btn-danger {
+  margin: -15px 0 45px 0;
+} */
+
+.glyphicon {
+  position: inherit;
+  /* color: red; */
+  margin-right: 40%;
+}
+.button__container {
+  display: grid;
+  grid-template-columns: 5;
+  height: 60px;
+
+  justify-items: end;
+  align-items: center;
+}
+
+.button--delete {
+  margin: -10px 0 50px 0;
+  grid-column: 3;
+}
+
+.button--add {
+  margin: -10px 4px 50px 0;
+  grid-column: 5;
+  width: 40px;
+}
+.button-borrar-lista .btn-sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer {
+  background-color: #263238;
+  display: flex;
+  align-items: center; /* Centra vertical */
+  justify-content: center; /* Centra horizontal */
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 40px;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.instrucciones {
+  display: flex;
+  align-items: center; /* Centra vertical */
+  justify-content: center; /* Centra horizontal */
+  font-size: 30px;
+}
+.instrucciones i {
+  position: absolute;
+  margin-left: 8rem;
+}
+
+.fa-info-circle {
+  position: absolute;
+  color: yellow;
+  font-size: 30px;
+}
+
+.swal2-popup {
+  display: none;
+  position: relative;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  width: 32em;
+  max-width: 100%;
+  padding: 1.25em;
+  border: none;
+  border-radius: 0.3125em;
+  background: #fff;
+  font-family: inherit;
+  font-size: 1.5rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-images-compra {
+    display: flex;
+    position: fixed;
+  }
+
+  .header-images-compra img.header-cart-compras {
+    height: 30px;
+    margin-left: 3%;
+  }
+  .header-images-compra img.header-list-compras {
+    height: 30px;
+    margin-left: 50%;
+  }
+
+  .header-cantidad-car-lis input#totales.header-valor-car {
+    margin-left: 1%;
+  }
+
+  .header-cantidad-car-lis input#count.header-valor-list {
+    margin-left: 75%;
+  }
+
+  .header-valor-car {
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 50%;
+    height: 20px;
+    width: 25px;
+    border: 0;
+    margin-top: -15px;
+  }
+
+  .header-valor-list {
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 50%;
+    height: 20px;
+    width: 25px;
+    border: 0;
+    margin-top: -15px;
+  }
+
+  th {
+    font-size: 13px;
+  }
+
+  .form-control.item_name {
+    font-size: 15px;
+    text-align: left;
+    margin: 0;
+    padding: 1px;
+  }
+
+  .form-control.item_cant {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  .form-control.item_unit {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+  }
+}
