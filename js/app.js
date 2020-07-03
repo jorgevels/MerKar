@@ -3,7 +3,6 @@ const app = new Vue({
   data: {
     titulo: "Mercados OR",
     tareas: [],
-    /*  checkboxArticle: "1", */
     nameArticle: "",
     quantity: "",
     unit: "",
@@ -11,7 +10,6 @@ const app = new Vue({
   methods: {
     agregarTarea() {
       this.tareas.push({
-        /* checkboxArticle: this.checkboxArticle, */
         nameArticle: this.nameArticle,
         quantity: this.quantity,
         unit: this.unit,
@@ -19,9 +17,6 @@ const app = new Vue({
       });
 
       contarInputs();
-
-      /* contar(); */
-      /*  this.checkboxArticle = ""; */
       this.nameArticle = "";
       this.quantity = "";
       this.unit = "";
@@ -36,53 +31,6 @@ const app = new Vue({
         /* alert(count); */
       }
 
-      /* var cboxes = document.getElementsByTagName("input");
-
-      for (var i = 0; i < cboxes.length; i++) {
-        let valor = cboxes[i].checked;
-        if (cboxes[i].className == "form-control") {
-        if (!cboxes[i].addEventListener) {
-          cboxes[i].attachEvent("onclick", contar);
-        } else {
-          cboxes[i].addEventListener("click", contar, true);
-        }
-         }
-      } */
-
-      /* function contar() {
-        var inputs,
-          i,
-          totales = 0;
-        inputs = document.getElementsByTagName("input");
-        for (i = 0; i < inputs.length; i++) {
-          if (inputs[i].type == "checkbox") {
-            if (inputs[i].checked == true) {
-              totales++;
-            }
-          }
-          document.getElementById("totales").value = totales;
-        }
-      } */
-
-      /* return totales; */
-      /*  Funcion que cuenta los articulos en el carrito */
-
-      /*  function contar() {
-        let totales = "";
-        let contador = 1;
-        const casillas = document.getElementsByTagName("input");
-        for (var i = 0; i < casillas.length; i++) {
-          let valor = casillas[i].checked;
-          let clase = casillas[i].className;
-          if (clase == "form-control") {
-            if (valor == true) {
-              totales = contador++;
-            }
-          }
-        }
-        document.getElementById("totales").value = totales;
-      } */
-
       /*  Selecciona todos los checkbox */
       $("#selectall").on("click", function () {
         $(".form-control").prop("checked", this.checked);
@@ -96,34 +44,6 @@ const app = new Vue({
           $("#selectall").prop("checked", false);
         }
       });
-
-      /* $(document).on("click", ".remove", function() {
-        var inputs = $("input[name^=articulos]");
-        var count = inputs.length;
-
-        var totales = "";
-        var contador = 1;
-        const casillas = document.getElementsByTagName("input");
-        for (var i = 0; i < casillas.length; i++) {
-          var valor = casillas[i].checked;
-          var clase = casillas[i].className;
-          if (clase == "form-controls") {
-            if (valor == true) {
-              totales = contador++;
-              document.getElementById("totales").value = totales - 1;
-            }
-            if (valor == false) {
-              totales = totales;
-              document.getElementById("totales").value = totales - 0;
-            }
-          }
-        }
-
-         $(this)
-          .closest("tr")
-          .remove();
-        document.getElementById("count").value = count - 1;
-      }); */
     },
 
     editarTarea(index) {
@@ -149,8 +69,9 @@ const app = new Vue({
     },
     // Elimina toda la lista
     eliminarAll(index) {
-      this.tareas.splice(index, 1000);
-      localStorage.setItem("mk", JSON.stringify(this.tareas));
+      this.tareas.splice(index, -1000);
+      /* localStorage.setItem("mk", JSON.stringify(this.tareas)); */
+      localStorage.removeItem("mk", JSON.stringify(this.tareas));
     },
   },
   created() {
