@@ -1,4 +1,3 @@
-// Requerimos el modulo de path el Html plugin que isntalamos
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -14,27 +13,30 @@ module.exports = {
   // Haciendo referencia al archivo principal
   /* entry: "./js/app.js", */
   // En este output, es donde vamos a guardar los archivos resultantes cuando hagamos la configuracion
-  entry: {
+  /* entry: {
     home: [
-      "./js/app.js",
-      "./js/ConfirmacionClosse.js",
-      "./js/ContarInputs.js",
-      "./js/ModalBorrar.js",
-      "./js/ModalInfo.js",
-      "./js/NoRefresc.js",
-      /* 
-      "./assets/styles/App.css",
-      "./assets/styles/index.css",
-      "./assets/styles/main.css", */
-    ],
+      "./src/js/app.js",
+      ],
+  }, */
+
+  entry: {
+    index: "./src/js/app.js",
+    about: "./src/js/ModalInfo.js",
   },
 
   output: {
     // La instancia resolve nos ayuda a detectar el directorio donde nos encontramos y el directorio donde vamos a guardar los archivos compilados
     path: path.resolve(__dirname, "dist"),
     // Filename nos pode un nombre al archivo compilado
-    filename: "bundle.js",
+    /* filename: "bundle.js", */
+    filename: "[name].[hash:20].js",
   },
+
+  /*  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[hash:20].js",
+  }, */
+
   // Este elemento resulve las extensiones que vamos a utilizar
   resolve: {
     extensions: [".js"],
@@ -47,7 +49,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       //Donde esta ubicado el template que tenemos
       /*  template: "./public/index.html", */
-      template: "./index.html",
+      template: "./src/page/main/index.html",
       filename: "./index.html",
     }),
     new MiniCssExtractPlugin({
@@ -56,21 +58,21 @@ module.exports = {
     }),
     new WebpackPwaManifestPlugin({
       //Le pasamos el objeto de configuracion
-      name: "MerKar ",
-      shortname: "MerKar",
+      name: "MerKar",
+      shortname: "Crea tu lista de Compras",
       description: "Crea tu lista de compras de manera facil",
-      background_color: "#fff",
+      background_color: "#f8e808",
       theme_color: "#b1a",
       //Array iconos de la aplicacion
       icons: [
         {
-          src: path.resolve("./assets/favicon/android-chrome-192x192.png"),
+          src: path.resolve("./src/assets/favicon/android-chrome-192x192.png"),
           //Le pasamos todos los tamaños que requerimos
           sizes: [192, 512],
         },
       ],
     }),
-    new FaviconsWebpackPlugin("./assets/images/cart-512x512.png"),
+    new FaviconsWebpackPlugin("./src/assets/favicon/apple-touch-icon.png"),
     new WorkboxWebpackPlugin.GenerateSW({
       runtimeCaching: [
         {
@@ -120,7 +122,7 @@ module.exports = {
           {
             loader: "file-loader",
             /* options: { name: "assets/[hash].[ext]" }, */
-            options: { name: "./assets/favicon/[hash].[ext]" },
+            options: { name: "./src/assets/favicon/[hash].[ext]" },
           },
         ],
       },

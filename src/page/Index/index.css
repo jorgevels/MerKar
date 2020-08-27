@@ -1,3 +1,4 @@
+/*# sourceMappingURL=main.a33e2386.chunk.css.map */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -47,11 +48,15 @@ body {
 }
 
 .container-main_title h1 {
-  font-family: 'Lobster';
+  font-family: Grand Hotel;
+  font-size: 40px;
+  color: #ff5c5c !important;
+  /* font-family: 'Lobster'; */
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   margin-top: 4rem;
+  font-weight: 500;
 }
 
 .footer {

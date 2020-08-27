@@ -7,8 +7,8 @@ let popHandler = () => {
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
     confirmButtonText: "Si",
-    cancelButtonText: "No"
-  }).then(result => {
+    cancelButtonText: "No",
+  }).then((result) => {
     if (result.value) {
       window.history.back();
     } else {

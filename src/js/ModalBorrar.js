@@ -1,5 +1,5 @@
-document.getElementById("MiFormulario2").addEventListener("submit", submit);
-document.getElementById("MiFormulario").addEventListener("submit", submit);
+document.getElementById("FormValidation").addEventListener("submit", submit);
+document.getElementById("FormDelete").addEventListener("submit", submit);
 document.getElementById("ok").addEventListener("click", enviar);
 document.getElementById("ko").addEventListener("click", cancelar);
 
@@ -13,11 +13,16 @@ function submit(e) {
   document.getElementById("capa").style.display = "block";
 }
 
-function enviar() {
+function enviar(e) {
   document.getElementById("capa").style.display = "none";
 
-  document.forms["MiFormulario2"].submit(() => {});
-  document.forms["MiFormulario"].submit(() => {});
+  document.forms["FormDelete"].submit((e) => {
+    e.preventDefault();
+  });
+  document.forms["FormValidation"].submit((e) => {
+    e.preventDefault();
+  });
+  e.preventDefault();
 }
 
 function cancelar(e) {

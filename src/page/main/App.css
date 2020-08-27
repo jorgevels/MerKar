@@ -110,7 +110,8 @@ body {
   max-width: 150px;
   position: absolute;
   text-align: center;
-  padding-left: 68%;
+  /*  padding-left: 68%; */
+  padding-left: 63%;
   position: fixed;
 }
 .header-anuncio-promo p {
@@ -133,7 +134,7 @@ body {
   /*   margin-top: 2px; */
   margin-top: 9px;
 
-  width: 130px;
+  width: 145px;
   height: 20px;
   color: #fff;
   font-size: 15px;

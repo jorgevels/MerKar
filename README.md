@@ -1,4 +1,4 @@
-# 🛒 MerKas 📱
+# 🛒 MerKar 📱
 
 Este repositorio contiene un proyecto con un a PWA que permite realizar una lista de compras de forma facil y ordenada
 
